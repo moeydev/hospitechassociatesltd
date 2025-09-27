@@ -115,6 +115,52 @@ footer {
     display: block;
   }
 
+  .partners-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 2em;
+}
+
+.partner-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.partner-logo {
+  position: relative;
+}
+
+.partner-logo img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  background: #f8f9fa;
+  padding: 10px;
+}
+
+.partner-name {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  background: rgba(0,64,128,0.8);
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.partner-description {
+  padding: 1em;
+  font-size: 14px;
+  color: #444;
+}
+
+
   nav a {
     display: block;
     margin: 10px 0;
