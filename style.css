@@ -1,3 +1,29 @@
+/* Header styling */
+header {
+  background-color: #004080;  /* dark medical blue */
+  padding: 1em 0;
+  color: white;
+  text-align: center;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* space between logo and text */
+}
+
+.site-logo {
+  height: 60px;  /* adjust as needed */
+  width: auto;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: 700;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -14,12 +40,6 @@ p {
 }
 
 
-header {
-  background: #857134;
-  color: #1a2125;
-  padding: 1em;
-  text-align: center;
-}
 
 nav {
   background: #e6f0ff;
@@ -49,9 +69,27 @@ nav a {
   font-weight: bold;
 }
 
+/* Intro (under header) */
 section {
-  padding: 2em;
+  max-width: 900px;
+  margin: 2em auto;
+  padding: 1em;
+  text-align: center;
 }
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+  color: #004080;
+}
+
+section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1em;
+  color: #444;
+}
+
 
 ul.timeline {
   list-style: none;
