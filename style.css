@@ -18,11 +18,26 @@ header {
   width: auto;
 }
 
+/* Header subtitle */
+.header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* keeps text aligned left of logo */
+}
+
 header h1 {
   font-size: 1.8rem;
   margin: 0;
   font-weight: 700;
 }
+
+header .subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 4px;
+  color: #e0e0e0; /* softer white so it looks professional */
+}
+
 
 body {
   font-family: 'Roboto', sans-serif;
