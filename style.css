@@ -130,12 +130,13 @@ button:hover {
 }
 
 footer {
-  background: #004080;
-  color: white;
+  background: #f8f9fa;  /* light gray background */
+  color: black;         /* footer text is black */
   text-align: center;
   padding: 1em;
-  margin-top: 2em;
+  font-size: 0.9rem;
 }
+
 
 /* --- Responsive Styles --- */
 @media (max-width: 768px) {
