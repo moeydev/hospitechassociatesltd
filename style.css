@@ -27,12 +27,21 @@ body {
 }
 
 /* ========================= Header ========================= */
+/* make header fixed to top */
 header {
-  width: 100%;
-  background: var(--brand-blue, #004080);
-  color: #fff;
-  padding: 1rem 0; /* controls vertical spacing inside header */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--brand-blue); /* keep existing color */
 }
+
+/* push page content below the fixed header */
+main, section {
+  margin-top: 100px; /* adjust this value to the height of your header (e.g. 90-110px) */
+}
+
 
 .header-container {
   max-width: 1100px;
