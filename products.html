@@ -1,46 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Products - Hospitech Associates Ltd.</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="favicon-32x32.png">
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <header>
-    <div class="header-container">
-      <img src="logo.png" alt="Hospitech Associates Ltd. Logo" class="site-logo">
-      <div class="header-text">
-        <h1>Hospitech Associates Ltd.</h1>
-        <p class="subtitle">Determined by Quality for Everyone</p>
-      </div>
-    </div>
-  </header>
+/* =========================
+   Base / Layout
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-  <nav>
-    <span class="menu-toggle">☰</span>
-    <div class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="products.html">Products</a>
-      <a href="partners.html">Partners</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
+:root{
+  --brand-blue: #004080;
+  --muted-bg:#f8f9fa;
+  --card-border:#e6e8eb;
+}
 
-  <section>
-    <h2>Our Products</h2>
-    <ul>
-      <li><strong>Diagnostic Reagents:</strong> In-vitro use reagents and consumables for accurate lab testing.</li>
-      <li><strong>Lab Consumables:</strong> Test tubes, pipettes, and other essential laboratory items.</li>
-      <li><strong>Medical Equipment:</strong> Devices and systems sourced from trusted international manufacturers.</li>
-    </ul>
-  </section>
+*{box-sizing:border-box}
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--muted-bg);
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px;
+}
 
-  <footer>
-    <p>© 2025 Hospitech Associates Ltd.</p>
-  </footer>
-</body>
-</html>
+/* Header */
+header{
+  background: var(--brand-blue);
+  color: #fff;
+  padding: 1rem 0;
+}
+.header-container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 1rem;
+  display:flex;
+  gap:15px;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.site-logo{height:60px;width:auto;display:block}
+.header-text{display:flex;flex-direction:column;align-items:center}
+header h1{font-size:1.8rem;margin:0}
+header .subtitle{color:#e0e0e0;font-style:italic;margin-top:4px;font-size:1rem}
+
+/* Nav */
+nav{
+  background:#e6f0ff;
+  padding:.9rem 0;
+  position:relative;
+}
+.menu-toggle{display:none;position:absolute;right:16px;top:8px;font-size:22px;cursor:pointer}
+.nav-links{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
+.nav-links a{color:var(--brand-blue);font-weight:700;text-decoration:none;padding:.25rem .5rem}
+.nav-links a.active{text-decoration:underline}
+
+/* Main / Section */
+main, section { max-width:1100px; margin:1.75rem auto; padding:0 1rem; }
+main h2{color:var(--brand-blue); font-size:2rem; text-align:center; margin-bottom:1rem}
+.department h3{color:var(--brand-blue); margin-bottom:0.25rem}
+.department h4{color:#555; margin-top:0;margin-bottom:1rem;font-weight:500}
+
+/* Product card layout */
+.products-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.product{
+  background:#fff;border:1px solid var(--card-border);border-radius:10px;padding:1rem;
+  box-shadow:0 3px 8px rgba(2,6,23,0.06); text-align:left;
+}
+.product h5{color:var(--brand-blue);margin:0 0 .5rem}
+.product .product-media{display:flex;justify-content:center;align-items:center;margin-bottom:.75rem}
+.product img{max-width:100%;height:190px;object-fit:contain;border-radius:4px}
+
+/* Table wrapping for mobile */
+.table-wrap{overflow-x:auto;margin-top:.75rem}
+.specs{border-collapse:collapse;width:100%;min-width:640px;background:#fff}
+.specs th,.specs td{border:1px solid #e6e6e6;padding:.6rem .75rem;vertical-align:top}
+.specs th{background:#f0f6ff;width:32%;text-align:left;font-weight:600;color:var(--brand-blue)}
+.specs td{color:#333;font-size:.95rem}
+
+/* Small improvements: zebra rows for readability */
+.specs tr:nth-child(odd) td{background:#ffffff}
+.specs tr:nth-child(even) td{background:#fbfdff}
+
+/* Footer */
+footer{background:var(--muted-bg);color:#000;text-align:center;padding:1rem;font-size:.95rem}
+
+/* Responsive */
+@media (max-width: 900px){
+  .product img{height:160px}
+  .specs{min-width:560px}
+}
+@media (max-width: 768px){
+  .menu-toggle{display:block}
+  .nav-links{display:none}
+  .nav-links.active{display:flex;flex-direction:column;align-items:center}
+  .header-container{flex-direction:column;gap:10px}
+  .product img{height:140px}
+  .specs{min-width:480px}
+}
