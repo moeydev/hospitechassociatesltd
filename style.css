@@ -25,10 +25,12 @@ body {
 
 /* ========================= Header ========================= */
 header {
-  background: var(--brand-blue);
+  width: 100%;
+  background: var(--brand-blue, #004080);
   color: #fff;
-  padding: 1rem 0;
+  padding: 1rem 0; /* controls vertical spacing inside header */
 }
+
 .header-container {
   max-width: 1100px;
   margin: 0 auto;
