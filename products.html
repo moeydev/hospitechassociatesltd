@@ -1,97 +1,154 @@
-/* =========================
-   Base / Layout
-========================= */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospitech Associates Ltd. - Products</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-:root{
-  --brand-blue: #004080;
-  --muted-bg:#f8f9fa;
-  --card-border:#e6e8eb;
-}
+<header>
+  <div class="header-container">
+    <img src="logo.png" alt="Hospitech Logo" class="site-logo">
+    <div class="header-text">
+      <h1>Hospitech Associates Ltd.</h1>
+      <span class="subtitle">Determined by Quality for Everyone</span>
+    </div>
+  </div>
+</header>
 
-*{box-sizing:border-box}
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: var(--muted-bg);
-  color: #333;
-  line-height: 1.6;
-  font-size: 16px;
-}
+<nav>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="partners.html">Partners</a>
+    <a href="products.html" class="active">Products</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
 
-/* Header */
-header{
-  background: var(--brand-blue);
-  color: #fff;
-  padding: 1rem 0;
-}
-.header-container{
-  max-width:1100px;
-  margin:0 auto;
-  padding:0 1rem;
-  display:flex;
-  gap:15px;
-  align-items:center;
-  justify-content:center;
-  flex-wrap:wrap;
-}
-.site-logo{height:60px;width:auto;display:block}
-.header-text{display:flex;flex-direction:column;align-items:center}
-header h1{font-size:1.8rem;margin:0}
-header .subtitle{color:#e0e0e0;font-style:italic;margin-top:4px;font-size:1rem}
+<main>
 
-/* Nav */
-nav{
-  background:#e6f0ff;
-  padding:.9rem 0;
-  position:relative;
-}
-.menu-toggle{display:none;position:absolute;right:16px;top:8px;font-size:22px;cursor:pointer}
-.nav-links{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap}
-.nav-links a{color:var(--brand-blue);font-weight:700;text-decoration:none;padding:.25rem .5rem}
-.nav-links a.active{text-decoration:underline}
+  <!-- Hematology Department -->
+  <section class="department center-content">
+    <h3>Hematology Department</h3>
+    <h4>Imported from NEO MEDICA</h4>
 
-/* Main / Section */
-main, section { max-width:1100px; margin:1.75rem auto; padding:0 1rem; }
-main h2{color:var(--brand-blue); font-size:2rem; text-align:center; margin-bottom:1rem}
-.department h3{color:var(--brand-blue); margin-bottom:0.25rem}
-.department h4{color:#555; margin-top:0;margin-bottom:1rem;font-weight:500}
+    <!-- Phoenix NCC-61 -->
+    <div class="product">
+      <div class="product-media">
+        <img src="Phoenix NCC-61.jfif" alt="Phoenix NCC-61">
+      </div>
+      <h5>Phoenix NCC-61</h5>
+      <p>Phoenix NCC-61 is one of the latest achievements from Neomedica in hematology...</p>
+      <div class="table-wrap">
+        <table class="specs">
+          <tr><th>Principle</th><td>WBC/DIFF: Flow cytometry, semiconductor, laser light multi-dimensional cell classification</td></tr>
+          <tr><th>WBC Analysis</th><td>Optical and impedance measurements</td></tr>
+          <tr><th>RBC/PLT Analysis</th><td>Impedance Method</td></tr>
+          <tr><th>HGB Test</th><td>Cyanide-free reagent colorimetry</td></tr>
+          <tr><th>Working Mode</th><td>Double WBC counting mode (impedance & optical)</td></tr>
+          <tr><th>5-part Differentiation</th><td>WBC</td></tr>
+          <tr><th>Parameters</th><td>WBC, LYM#, MON#, NEU#, EOS#, BAS#, LYM%, MON%, NEU%, EOS%, BAS%, RBC, HGB, HCT, MCV, MCH, MCHC, RDW-SD, RDW-CV, PLT, MPV, PDW, PCT, P-LCR, P-LCC</td></tr>
+          <tr><th>Mode</th><td>Whole blood, Prediluted</td></tr>
+          <tr><th>Sample Volume</th><td>Whole blood 15 µl, Prediluted 15 µl</td></tr>
+          <tr><th>Dimensions</th><td>490x332x459mm (WxDxH), 35 kg</td></tr>
+          <tr><th>Throughput</th><td>60 samples/hour</td></tr>
+          <tr><th>Software</th><td>Linux OS, English & Serbian languages</td></tr>
+          <tr><th>Display</th><td>High quality 10.4’’ LCD</td></tr>
+          <tr><th>Power Supply</th><td>AC100-240V~50/60 Hz</td></tr>
+          <tr><th>Interface</th><td>PS/2 mouse & keyboard; Ethernet, RS232, USB</td></tr>
+        </table>
+      </div>
+    </div>
 
-/* Product card layout */
-.products-container{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
-.product{
-  background:#fff;border:1px solid var(--card-border);border-radius:10px;padding:1rem;
-  box-shadow:0 3px 8px rgba(2,6,23,0.06); text-align:left;
-}
-.product h5{color:var(--brand-blue);margin:0 0 .5rem}
-.product .product-media{display:flex;justify-content:center;align-items:center;margin-bottom:.75rem}
-.product img{max-width:100%;height:190px;object-fit:contain;border-radius:4px}
+    <!-- Phoenix NCC-51 AL -->
+    <div class="product">
+      <div class="product-media">
+        <img src="Phoneix NCC - 51 AL.jfif" alt="Phoenix NCC-51 AL">
+      </div>
+      <h5>Phoenix NCC-51 AL</h5>
+      <p>Phoenix NCC-51 AL is a new modification of the famous model designed for certain labs...</p>
+      <div class="table-wrap">
+        <table class="specs">
+          <tr><th>Principle</th><td>WBC/DIFF: Flow cytometry, semiconductor, laser light multi-dimensional cell classification</td></tr>
+          <tr><th>WBC Analysis</th><td>Optical and impedance measurements</td></tr>
+          <tr><th>RBC/PLT Analysis</th><td>Impedance Method</td></tr>
+          <tr><th>5-part Differentiation</th><td>WBC</td></tr>
+          <tr><th>Parameters</th><td>WBC, LYM#, MON#, NEU#, EOS#, BAS#, LYM%, MON%, NEU%, EOS%, BAS%, RBC, HGB, HCT, MCV, MCH, MCHC, RDW-SD, RDW-CV, PLT, MPV, PDW, PCT, P-LCR, P-LCC</td></tr>
+          <tr><th>Sample Volume</th><td>Whole blood 20 µl, Prediluted 20 µl</td></tr>
+          <tr><th>Autoloader</th><td>50 positions</td></tr>
+          <tr><th>Throughput</th><td>Up to 60 samples/hour</td></tr>
+          <tr><th>Software</th><td>Windows OS, PC display 14" color TFT</td></tr>
+          <tr><th>Dimensions</th><td>660x560x545mm, 73 kg</td></tr>
+        </table>
+      </div>
+    </div>
 
-/* Table wrapping for mobile */
-.table-wrap{overflow-x:auto;margin-top:.75rem}
-.specs{border-collapse:collapse;width:100%;min-width:640px;background:#fff}
-.specs th,.specs td{border:1px solid #e6e6e6;padding:.6rem .75rem;vertical-align:top}
-.specs th{background:#f0f6ff;width:32%;text-align:left;font-weight:600;color:var(--brand-blue)}
-.specs td{color:#333;font-size:.95rem}
+    <!-- Phoenix NCC-5500 -->
+    <div class="product">
+      <div class="product-media">
+        <img src="Phoenix NCC-5500.jfif" alt="Phoenix NCC-5500">
+      </div>
+      <h5>Phoenix NCC-5500</h5>
+      <p>Most advanced 5-diff hematology analyzer with autoloader 120 positions...</p>
+      <div class="table-wrap">
+        <table class="specs">
+          <tr><th>Principle</th><td>WBC/DIFF: Flow cytometry, semiconductor, laser light multi-dimensional cell classification</td></tr>
+          <tr><th>Working Mode</th><td>Two units (WOC & WIC)</td></tr>
+          <tr><th>Throughput</th><td>Autoloader: 110 samples/hr, Manual: 100 samples/hr</td></tr>
+          <tr><th>Sample Volume</th><td>Autoloader 50 µl, Manual 40 µl, Prediluted 40 µl</td></tr>
+          <tr><th>Display</th><td>PC display 14" color TFT</td></tr>
+          <tr><th>Dimensions</th><td>670x790x690mm, 91.5 kg</td></tr>
+        </table>
+      </div>
+    </div>
 
-/* Small improvements: zebra rows for readability */
-.specs tr:nth-child(odd) td{background:#ffffff}
-.specs tr:nth-child(even) td{background:#fbfdff}
+    <!-- Phoenix NCC-60 VET -->
+    <div class="product">
+      <div class="product-media">
+        <img src="Phoneix NCC - 60 VET.jfif" alt="Phoenix NCC-60 VET">
+      </div>
+      <h5>Phoenix NCC-60 VET</h5>
+      <p>Unique veterinary hematology analyzer, full 5-diff for 13 animal species...</p>
+      <div class="table-wrap">
+        <table class="specs">
+          <tr><th>Principle</th><td>Flow cytometry, multi-dimensional cell classification</td></tr>
+          <tr><th>Sample Volume</th><td>Whole blood 20 µl, Prediluted 20 µl</td></tr>
+          <tr><th>Throughput</th><td>60 samples/hour</td></tr>
+          <tr><th>Display</th><td>PC display 14" color TFT</td></tr>
+          <tr><th>Dimensions</th><td>598.5×585.5×495 mm, 70 kg</td></tr>
+        </table>
+      </div>
+    </div>
 
-/* Footer */
-footer{background:var(--muted-bg);color:#000;text-align:center;padding:1rem;font-size:.95rem}
+    <!-- Phoenix NCC-61 VET -->
+    <div class="product">
+      <div class="product-media">
+        <img src="Phoenix NCC-61 VET.jfif" alt="Phoenix NCC-61 VET">
+      </div>
+      <h5>Phoenix NCC-61 VET</h5>
+      <p>Latest VET hematology device with onboard 4 reagents and reticulocyte analysis...</p>
+      <div class="table-wrap">
+        <table class="specs">
+          <tr><th>Principle</th><td>Flow cytometry, multi-dimensional cell classification</td></tr>
+          <tr><th>Working Mode</th><td>Double WBC counting mode (impedance & optical)</td></tr>
+          <tr><th>Throughput</th><td>60 samples/hour</td></tr>
+          <tr><th>Sample Volume</th><td>Whole blood 20 µl, Prediluted 20 µl</td></tr>
+          <tr><th>Display</th><td>High quality 10.4’’ LCD</td></tr>
+          <tr><th>Dimensions</th><td>490x332x459mm, 35 kg</td></tr>
+        </table>
+      </div>
+    </div>
 
-/* Responsive */
-@media (max-width: 900px){
-  .product img{height:160px}
-  .specs{min-width:560px}
-}
-@media (max-width: 768px){
-  .menu-toggle{display:block}
-  .nav-links{display:none}
-  .nav-links.active{display:flex;flex-direction:column;align-items:center}
-  .header-container{flex-direction:column;gap:10px}
-  .product img{height:140px}
-  .specs{min-width:480px}
-}
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2025 Hospitech Associates Ltd. All rights reserved.
+</footer>
+
+</body>
+</html>
