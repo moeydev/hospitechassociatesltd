@@ -1,13 +1,16 @@
+/* reset default browser spacing so header touches the top */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
 /* ========================= Base / Layout ========================= */
 :root{
   --brand-blue: #004080;
   --muted-bg:#f8f9fa;
   --card-border:#e6e8eb;
 }
-html, body {
-  margin: 0;
-  padding: 0;
-}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,7 +23,7 @@ body {
   color: #333;
   line-height: 1.6;
   font-size: 16px;
-  padding-top: 80px; /* to avoid overlap with fixed nav */
+  padding-top: 0px; /* to avoid overlap with fixed nav */
 }
 
 /* ========================= Header ========================= */
