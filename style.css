@@ -1,8 +1,4 @@
 /* reset default browser spacing so header touches the top */
-html, body {
-  margin: 0;
-  padding: 0;
-}
 
 /* ========================= Base / Layout ========================= */
 :root{
@@ -234,3 +230,8 @@ footer {
   .product img { height: 140px; }
   .specs { min-width: 480px; }
 }
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
